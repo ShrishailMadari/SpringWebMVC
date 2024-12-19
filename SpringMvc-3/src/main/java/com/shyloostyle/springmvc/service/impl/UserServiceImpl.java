@@ -3,7 +3,6 @@ package com.shyloostyle.springmvc.service.impl;
 import com.shyloostyle.springmvc.model.User;
 import com.shyloostyle.springmvc.repository.UserRepository;
 import com.shyloostyle.springmvc.service.UserService;
-
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -14,13 +13,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean save(User user) {
-        userRepository.save(user);
-        return false;
+    public User save(User user) {
+        return userRepository.save(user);
     }
 
     @Override
-    public List<User> getUser(User user) {
+    public List<User> getUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public User getUserById(Integer id) {
+        return userRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Boolean deleteUserById(User user, Integer id) {
+        return null;
     }
 }
