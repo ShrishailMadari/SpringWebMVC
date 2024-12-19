@@ -24,8 +24,14 @@ public class UserController {
         return "index";
     }
     @PostMapping("/user")
-    public String saveUser(Model model) {
+    public String saveUser(@PathVariable User user,Model model) {
         // Save the user object (you can add logic to save to the database here)
+        User savedUser = userService.save(user);
+        if (savedUser != null){
+            model.addAttribute("smsg","User saved");
+        }else {
+            model.addAttribute("emsg","User Is Null");
+        }
         return "index";  // Redirect to load the form again
     }
 
