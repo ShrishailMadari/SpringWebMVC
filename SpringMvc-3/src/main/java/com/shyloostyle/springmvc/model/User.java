@@ -12,8 +12,7 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@ToString
-
+@Table(name = "users_tbl")  // Renaming the table
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

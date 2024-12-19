@@ -3,8 +3,10 @@ package com.shyloostyle.springmvc.service.impl;
 import com.shyloostyle.springmvc.model.User;
 import com.shyloostyle.springmvc.repository.UserRepository;
 import com.shyloostyle.springmvc.service.UserService;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+@Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
