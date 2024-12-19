@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 // to represent this class as controller
-
+//using single index page multiple methods are called to execute the multiple features
+//message is same but the values are different
 @Controller
 public class messageController {
     @GetMapping("/welcome")
