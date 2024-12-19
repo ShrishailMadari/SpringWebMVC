@@ -7,6 +7,8 @@ import org.springframework.web.servlet.ModelAndView;
 // to represent this class as controller
 //using single index page multiple methods are called to execute the multiple features
 //message is same but the values are different
+//this is multi action controller, similar to this there will be multiple
+//controllers with multiple methods
 @Controller
 public class messageController {
     @GetMapping("/welcome")
